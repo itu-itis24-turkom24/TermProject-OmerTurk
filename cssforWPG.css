@@ -1,0 +1,67 @@
+body{
+    background-color: orange;
+}
+
+h1{
+    color: black;
+}
+header {
+    background-color: #ddd;
+    padding: 20px;
+    text-align: center;
+}
+.Images {
+    display: flex;
+    flex-wrap: wrap; /* Resimler bir satırı aşarsa alt satıra geçer */
+    justify-content: center; /* Yatayda ortalar */
+    align-items: center; /* Dikeyde ortalar */
+    row-gap: 20px; /* Satırlar arası dikey boşluk */
+    column-gap: 10px; /* Kolonlar arası yatay boşluk */
+    height: 50vh; /* Container'ın yüksekliğini viewport yüksekliği kadar yapar */
+}
+.Images img {
+    width: 100px; /* Resim genişliği */
+    height: auto; /* Oranları korumak için otomatik yükseklik */
+    border: 1px solid #ccc; /* İsteğe bağlı olarak çerçeve */
+    border-radius: 5px; /* Köşeleri yuvarlatmak için */
+}
+/* .Input-and-Text ve .Buttons class'ını ortalamak */
+.Input-and-Text,
+.Buttons {
+    display: flex;           /* Flexbox kullanarak düzeni sağlıyoruz */
+    flex-direction: column;  /* Öğeleri dikeyde sıralıyoruz */
+    align-items: center;     /* Yatayda ortalıyoruz */
+    justify-content: center; /* Dikeyde ortalıyoruz */
+    margin: 0 auto;          /* Ortalamayı sağlayan genişlik ayarı */
+}
+
+/* .Input-and-Text içindeki öğeler */
+.Input-and-Text {
+    margin-bottom: 20px;     /* Input ve butonlar arasında boşluk bırakıyoruz */
+    flex-direction: row;     /* label ve input'u aynı satırda sıralıyoruz */
+}
+
+/* .Buttons içindeki butonlar */
+.Buttons {
+    gap: 10px;               /* Butonlar arasına boşluk ekliyoruz */
+}
+
+/* Buton stil düzenlemeleri */
+.Buttons button {
+    padding: 10px 20px;      /* Butonun iç alanını düzenliyoruz */
+    width: 150px;            /* Buton genişliğini ayarlıyoruz */
+    cursor: pointer;        /* Buton tıklanabilir simgesi */
+    background-color: #4CAF50; /* Buton arka plan rengi */
+    color: white;            /* Buton metin rengi */
+    border: none;            /* Kenarlık yok */
+    border-radius: 5px;      /* Buton köşe yuvarlatma */
+}
+
+.Buttons button:hover {
+    background-color: #45a049; /* Hover efekti */
+}
+
+/* Input stil düzenlemeleri */
+.Input-and-Text input {
+    margin-left: 10px;       /* label ile input arasında boşluk bırakıyoruz */
+}
