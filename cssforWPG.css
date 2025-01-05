@@ -46,22 +46,53 @@ header {
     gap: 10px;               /* Butonlar arasına boşluk ekliyoruz */
 }
 
-/* Buton stil düzenlemeleri */
-.Buttons button {
+#SubmitButton{
     padding: 10px 20px;      /* Butonun iç alanını düzenliyoruz */
     width: 150px;            /* Buton genişliğini ayarlıyoruz */
     cursor: pointer;        /* Buton tıklanabilir simgesi */
-    background-color: #4CAF50; /* Buton arka plan rengi */
-    color: white;            /* Buton metin rengi */
+    background-color: #dfdc2e; /* Buton arka plan rengi */
+    color: black;            /* Buton metin rengi */
     border: none;            /* Kenarlık yok */
-    border-radius: 5px;      /* Buton köşe yuvarlatma */
+    border-radius: 5px;
 }
 
-.Buttons button:hover {
-    background-color: #45a049; /* Hover efekti */
+#ResetButton{
+    padding: 10px 20px;      /* Butonun iç alanını düzenliyoruz */
+    width: 150px;            /* Buton genişliğini ayarlıyoruz */
+    cursor: pointer;        /* Buton tıklanabilir simgesi */
+    background-color: rgb(70, 70, 70); /* Buton arka plan rengi */
+    color: white;            /* Buton metin rengi */
+    border: none;            /* Kenarlık yok */
+    border-radius: 5px;
+}
+
+#SubmitButton:hover{
+    background-color: #819f1e;
+}
+
+#ResetButton:hover{
+    background-color: black;
 }
 
 /* Input stil düzenlemeleri */
 .Input-and-Text input {
     margin-left: 10px;       /* label ile input arasında boşluk bırakıyoruz */
+}
+.Hearts {
+    display: flex;
+    align-items: center;
+    flex-direction: column; /* Dikey hizalama */
+    margin-left: calc(50%);
+    margin-top: calc(-8%);
+    gap: 15px;
+}
+.score-container,
+.lives-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.hearts img {
+    width: 60px;
+    height: auto;
 }
