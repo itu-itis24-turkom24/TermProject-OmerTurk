@@ -12,57 +12,55 @@ header {
 }
 .Images {
     display: flex;
-    flex-wrap: wrap; /* Resimler bir satırı aşarsa alt satıra geçer */
-    justify-content: center; /* Yatayda ortalar */
-    align-items: center; /* Dikeyde ortalar */
-    row-gap: 20px; /* Satırlar arası dikey boşluk */
-    column-gap: 10px; /* Kolonlar arası yatay boşluk */
-    height: 50vh; /* Container'ın yüksekliğini viewport yüksekliği kadar yapar */
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
+    column-gap: 10px;
+    height: 50vh;
 }
 .Images img {
-    width: 100px; /* Resim genişliği */
-    height: auto; /* Oranları korumak için otomatik yükseklik */
-    border: 1px solid #ccc; /* İsteğe bağlı olarak çerçeve */
-    border-radius: 5px; /* Köşeleri yuvarlatmak için */
+    width: 100px;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
-/* .Input-and-Text ve .Buttons class'ını ortalamak */
+
 .Input-and-Text,
 .Buttons {
-    display: flex;           /* Flexbox kullanarak düzeni sağlıyoruz */
-    flex-direction: column;  /* Öğeleri dikeyde sıralıyoruz */
-    align-items: center;     /* Yatayda ortalıyoruz */
-    justify-content: center; /* Dikeyde ortalıyoruz */
-    margin: 0 auto;          /* Ortalamayı sağlayan genişlik ayarı */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
 }
 
-/* .Input-and-Text içindeki öğeler */
 .Input-and-Text {
-    margin-bottom: 20px;     /* Input ve butonlar arasında boşluk bırakıyoruz */
-    flex-direction: row;     /* label ve input'u aynı satırda sıralıyoruz */
+    margin-bottom: 20px;
+    flex-direction: row;
 }
 
-/* .Buttons içindeki butonlar */
 .Buttons {
-    gap: 10px;               /* Butonlar arasına boşluk ekliyoruz */
+    gap: 10px;
 }
 
 #SubmitButton{
-    padding: 10px 20px;      /* Butonun iç alanını düzenliyoruz */
-    width: 150px;            /* Buton genişliğini ayarlıyoruz */
-    cursor: pointer;        /* Buton tıklanabilir simgesi */
-    background-color: #dfdc2e; /* Buton arka plan rengi */
-    color: black;            /* Buton metin rengi */
-    border: none;            /* Kenarlık yok */
+    padding: 10px 20px;
+    width: 150px;
+    cursor: pointer;
+    background-color: #dfdc2e;
+    color: black;
+    border: none;
     border-radius: 5px;
 }
 
 #ResetButton{
-    padding: 10px 20px;      /* Butonun iç alanını düzenliyoruz */
-    width: 150px;            /* Buton genişliğini ayarlıyoruz */
-    cursor: pointer;        /* Buton tıklanabilir simgesi */
-    background-color: rgb(70, 70, 70); /* Buton arka plan rengi */
-    color: white;            /* Buton metin rengi */
-    border: none;            /* Kenarlık yok */
+    padding: 10px 20px;
+    width: 150px;
+    cursor: pointer;
+    background-color: rgb(70, 70, 70);
+    color: white;
+    border: none;
     border-radius: 5px;
 }
 
@@ -74,14 +72,13 @@ header {
     background-color: black;
 }
 
-/* Input stil düzenlemeleri */
 .Input-and-Text input {
-    margin-left: 10px;       /* label ile input arasında boşluk bırakıyoruz */
+    margin-left: 10px;
 }
 .Hearts {
     display: flex;
     align-items: center;
-    flex-direction: column; /* Dikey hizalama */
+    flex-direction: column;
     margin-left: calc(50%);
     margin-top: calc(-8%);
     gap: 15px;
