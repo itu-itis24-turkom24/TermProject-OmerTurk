@@ -11,44 +11,64 @@ const image6 = document.getElementById('Image6');
 const image7 = document.getElementById('Image7');
 const image8 = document.getElementById('Image8');
 let can=3;
+let Nvar=true;
+let Yvar=true;
+let Mvar=true;
+let Pvar=true;
+let Hvar=true;
+
+function AddHearts(can){
+    return can*20
+}
 
 Submitbutton.addEventListener("click", function() {
     const inputValue = input.value.trim();
     let currentValue = parseInt(score.textContent, 10);
 
-    if(inputValue=="N"){
+    if(inputValue=="N" || inputValue=="n" && Nvar==true){
         image1.src="N.svg";
         currentValue += 20;
+        Nvar=false;
         score.textContent = currentValue;
     }
-    else if(inputValue=="Y"){
+    else if(inputValue=="Y" || inputValue=="y" && Yvar==true){
         image2.src="Y.svg";
         currentValue += 20;
+        Yvar=false;
         score.textContent = currentValue;
     }
-    else if(inputValue=="M"){
+    else if(inputValue=="M" || inputValue=="m" && Mvar==true){
         image3.src="M.svg";
         currentValue += 20;
+        Mvar=false;
         score.textContent = currentValue;
     }
-    else if(inputValue=="P"){
+    else if(inputValue=="P" || inputValue=="p" && Pvar==true){
         image4.src="P.svg";
         currentValue += 20;
+        Pvar=false;
         score.textContent = currentValue;
     }
-    else if(inputValue=="H"){
+    else if(inputValue=="H" || inputValue=="h" && Hvar==true){
         image5.src="H.svg";
         currentValue += 20;
+        Hvar=false;
         score.textContent = currentValue;
     }
-    else if(inputValue=="NYMPH"){
-        image1.src="N.svg";
-        image2.src="Y.svg";
-        image3.src="M.svg";
-        image4.src="P.svg";
-        image5.src="H.svg";
-        currentValue = 100;
-        score.textContent = currentValue;
+    else if(input.value.length>1)
+    {
+        if(inputValue=="NYMPH" || inputValue=="nymph"){
+            image1.src="N.svg";
+            image2.src="Y.svg";
+            image3.src="M.svg";
+            image4.src="P.svg";
+            image5.src="H.svg";
+            currentValue = 100;
+            score.textContent = currentValue;
+        }
+        else{
+            can=0;
+        }
     }
     else{
         if(can==3){
@@ -63,14 +83,18 @@ Submitbutton.addEventListener("click", function() {
         can-=1;
     }
     if(currentValue==100){
-        score.textContent = currentValue;
-        alert("You have 100 score, you won the game!");
+        score.textContent = currentValue+AddHearts(can);
+        alert("You won the game!");
         input.disabled = true;
+        Submitbutton.disabled = true;
     }
     if(can==0){
+        image8.src="brokenheart.svg"
+        image7.src="brokenheart.svg"
         image6.src="brokenheart.svg"
         alert("You have 0 lives, you lost the game!");
         input.disabled = true;
+        Submitbutton.disabled = true;
     }
 });
 
@@ -87,4 +111,10 @@ ResetButton.addEventListener("click", function() {
     can=3;
     input.value="";
     input.disabled = false;
+    Submitbutton.disabled = false;
+    Nvar=true;
+    Yvar=true;
+    Mvar=true;
+    Pvar=true;
+    Hvar=true;
 });
