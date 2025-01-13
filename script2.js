@@ -22,7 +22,7 @@ function AddHearts(can){
 }
 
 Submitbutton.addEventListener("click", function() {
-    const inputValue = input.value.trim();
+    inputValue = input.value.trim();
     let currentValue = parseInt(score.textContent, 10);
 
     if(inputValue=="N" || inputValue=="n" && Nvar==true){
@@ -57,7 +57,8 @@ Submitbutton.addEventListener("click", function() {
     }
     else if(input.value.length>1)
     {
-        if(inputValue=="NYMPH" || inputValue=="nymph"){
+        inputValue=inputValue.toLowerCase();
+        if(inputValue=="nymph"){
             image1.src="N.svg";
             image2.src="Y.svg";
             image3.src="M.svg";
