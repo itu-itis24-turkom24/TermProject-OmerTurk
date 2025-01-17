@@ -22,6 +22,7 @@ header {
 .Images img {
     width: 100px;
     height: auto;
+    object-fit: contain;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
