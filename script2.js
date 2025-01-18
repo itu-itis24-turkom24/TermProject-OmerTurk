@@ -25,31 +25,31 @@ Submitbutton.addEventListener("click", function() {
     inputValue = input.value.trim();
     let currentValue = parseInt(score.textContent, 10);
 
-    if(inputValue=="N" || inputValue=="n" && Nvar==true){
+    if((inputValue=="N" || inputValue=="n") && Nvar==true){
         image1.src="N.svg";
         currentValue += 20;
         Nvar=false;
         score.textContent = currentValue;
     }
-    else if(inputValue=="Y" || inputValue=="y" && Yvar==true){
+    else if((inputValue=="Y" || inputValue=="y") && Yvar==true){
         image2.src="Y.svg";
         currentValue += 20;
         Yvar=false;
         score.textContent = currentValue;
     }
-    else if(inputValue=="M" || inputValue=="m" && Mvar==true){
+    else if((inputValue=="M" || inputValue=="m") && Mvar==true){
         image3.src="M.svg";
         currentValue += 20;
         Mvar=false;
         score.textContent = currentValue;
     }
-    else if(inputValue=="P" || inputValue=="p" && Pvar==true){
+    else if((inputValue=="P" || inputValue=="p") && Pvar==true){
         image4.src="P.svg";
         currentValue += 20;
         Pvar=false;
         score.textContent = currentValue;
     }
-    else if(inputValue=="H" || inputValue=="h" && Hvar==true){
+    else if((inputValue=="H" || inputValue=="h") && Hvar==true){
         image5.src="H.svg";
         currentValue += 20;
         Hvar=false;
