@@ -20,7 +20,6 @@
      id="layer1"
      inkscape:label="Katman 1"
      inkscape:groupmode="layer">
-    <!-- Arkaplan Dikdörtgen -->
     <rect
        style="fill:#ffffff;fill-opacity:1;"
        id="rect1"
@@ -28,7 +27,6 @@
        height="100%"
        x="0"
        y="0" />
-    <!-- Metin -->
     <text
        xml:space="preserve"
        style="font-family:'Niagara Solid'; font-size:300px; fill:#000000; text-anchor:middle;"
